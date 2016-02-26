@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
             boolean success = false;
             Request request = new Request.Builder()
-                    .url("http://etoll-api.mybluemix.net/planner?content="+mContent)
+                    .url("http://etoll-api.mybluemix.net/planner/execute?id="+mContent)
                     .build();
             try {
                 Response response = client.newCall(request).execute();
